@@ -16,4 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
+   });
+   Route::post('/order', 'order@store');
+   Route::post('/product', 'product@store');
+   Route::post('/product', 'product@store');
