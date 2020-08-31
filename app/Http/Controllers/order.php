@@ -5,6 +5,11 @@ use App\Kelas;
 use Illuminate\Support\Facades\Validator;
 class order extends Controller
 {
+    public function show()
+{
+ return Kelas::all();
+}
+
  public function store(Request $request)
  {
  $validator=Validator::make($request->all(),
