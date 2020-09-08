@@ -25,6 +25,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
    Route::get('/product', 'product@show');
    Route::get('/product/{id}', 'product@detail');
 
-   Route::get('/product', 'product@show');
-   Route::get('/product/{id}', 'product@detail');
-   Route::post('/product', 'product@store');
+   Route::get('/customer', 'customer@show');
+   Route::get('/customer/{id}', 'customer@detail');
+   Route::post('/customer', 'customer@store');
+   Route::put('/siswa/{id}', 'customers@update');
