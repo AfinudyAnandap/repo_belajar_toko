@@ -20,12 +20,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
    Route::post('/order', 'order@store');
    Route::get('/order', 'order@show');
    Route::get('/order/{id}', 'order@detail');
+   Route::delete('/order/{id}', 'order@destroy');
 
    Route::post('/product', 'product@store');
    Route::get('/product', 'product@show');
    Route::get('/product/{id}', 'product@detail');
+   Route::delete('/product/{id}', 'product@destroy');
 
-   Route::get('/customer', 'customer@show');
-   Route::get('/customer/{id}', 'customer@detail');
-   Route::post('/customer', 'customer@store');
-   Route::put('/siswa/{id}', 'customers@update');
+   Route::get('/customers', 'customer@show');
+   Route::get('/customers/{id}', 'customer@detail');
+   Route::post('/customers', 'customer@store');
+   Route::put('/customers/{id}', 'customers@update');
+   Route::delete('/customers/{id}', 'customers@destroy');
